@@ -1,4 +1,4 @@
-🟩 WattWorks — Leitor Inteligente de Contas de Energia
+# 🟩 WattWorks — Leitor Inteligente de Contas de Energia
 Facilitando a compreensão de contas de energia de grandes empresas
 
 Projeto desenvolvido como trabalho final do Entra21, com o objetivo de resolver um problema recorrente em grandes companhias:
