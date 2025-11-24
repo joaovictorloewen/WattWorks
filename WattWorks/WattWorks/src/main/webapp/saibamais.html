@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/WattWorks/imagens/logo-wattworks.png" />
+    <title>Saiba Mais - Watt Works</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="/WattWorks/estilos/paginas-gerais.css" rel="stylesheet" />
+    <style>
+        :root {
+            --dark-purple: #4A148C; /* Um roxo mais vibrante */
+            --blue: #1976D2;        /* Um azul mais profundo */
+            --light-purple: #E1BEE7; /* Um roxo claro suave */
+            --text-dark: #333333;
+            --text-light: #555555;
+            --success-green: #4CAF50;
+            --warning-yellow: #FFC107;
+            --background-light: #F5F5F5;
+            --white: #FFFFFF;
+            --section-bg-light: #FFFFFF;
+            --section-bg-dark: var(--dark-purple); /* Fundo da seção problema */
+            --box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+            --border-radius: 1rem;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            padding: 80px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-purple);
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--dark-purple);
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--blue);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            color: var(--dark-purple);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        ul li::before {
+            content: "\f00c"; /* Font Awesome check icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--success-green);
+            font-size: 1.3rem;
+        }
+
+        .section {
+            background-color: var(--section-bg-light);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 60px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .section-problem {
+            background-color: var(--section-bg-dark);
+            color: var(--white);
+        }
+
+        .section-problem h2,
+        .section-problem p,
+        .section-problem ul li {
+            color: var(--white);
+        }
+
+        .section-problem ul li::before {
+            color: var(--light-purple); /* Cor para os checks na seção roxa escura */
+        }
+
+        .money-image {
+            max-width: 70%;
+            height: auto;
+            display: block;
+            margin: 40px auto;
+            border-radius: 0.75rem;
+            box-shadow: var(--box-shadow);
+            opacity: 0.9;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: var(--blue);
+            margin-right: 20px;
+            flex-shrink: 0;
+            padding-top: 5px;
+        }
+
+        .feature-item h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: var(--dark-purple);
+        }
+        .feature-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        /* Animações sutis */
+        .animated {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 0.8s forwards ease-out;
+        }
+
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay para cada seção */
+        .section:nth-child(1) { animation-delay: 0.2s; }
+        .section:nth-child(2) { animation-delay: 0.4s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+
+    </style>
+</head>
+<body>
+	
+	<a href="/WattWorks/index.html" class="btn-voltar">✕ Voltar</a>
+	
+    <div class="container">
+        <h1 class="animated">WattWorks como seu parceiro energético</h1>
+
+        <section class="section section-problem animated">
+            <h2>O Desafio Atual da Gestão de Energia</h2>
+            <p>Para muitas empresas, as faturas de energia são um enigma. Elas representam um custo significativo e, frequentemente, ocultam complexidades que levam a pagamentos desnecessários. A falta de clareza dificulta a identificação de multas e a otimização do consumo.</p>
+            <ul>
+                <li>Empresas pagam valores elevados sem entender a origem dos custos.</li>
+                <li>Faturas técnicas e detalhadas são um obstáculo à interpretação.</li>
+                <li>Dificuldade em visualizar multas por irregularidades e suas causas.</li>
+            </ul>
+        </section>
+
+        <section class="section section-solution animated">
+            <h2>A Solução Inteligente WattWorks</h2>
+            <p>Com o Software Watt Works, transformamos a complexidade em clareza. Nosso algoritmo de ponta realiza a leitura e a análise automática das suas faturas, revelando insights que impulsionam a economia e a eficiência energética.</p>
+            <ul>
+                <li><i class="fas fa-exclamation-triangle"></i> **Detecção de Irregularidades:** Identificação precisa de cobranças indevidas, como excedentes de reativos e ultrapassagem de demanda contratada.</li>
+                <li><i class="fas fa-chart-line"></i> **Oportunidades de Otimização:** Sugestões personalizadas para redução de custos, como mudança de modalidade de fornecimento, migração para o mercado livre e análise de investimentos em fontes alternativas.</li>
+                <li><i class="fas fa-cogs"></i> **Gestão Ativa e Proativa:** Ferramentas para estimar custos futuros e alertar sobre variações bruscas de consumo, garantindo uma gestão energética sem surpresas.</li>
+            </ul>
+        </section>
+
+        <section class="section section-features animated">
+            <h2>Como Funciona: Simplicidade e Eficiência</h2>
+            <p>Nosso processo é projetado para ser intuitivo e poderoso, garantindo que os usuários tenham total controle e visibilidade sobre seus gastos com energia, desde o envio da fatura até a otimização da operação.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-item">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div>
+                            <h3>Envio Facilitado</h3>
+                            <p>Envie suas faturas de energia de forma prática via upload ou integração OCR, simplificando a entrada de dados.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <h3>Armazenamento Seguro</h3>
+                            <p>Suas informações são armazenadas de forma segura e organizada em nosso banco de dados mvSQL, garantindo a integridade dos dados.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <div>
+                            <h3>Interpretação Inteligente</h3>
+                            <p>Nosso sistema interpreta e organiza os dados da fatura, transformando informações complexas em insights acionáveis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-item">
+                        <i class="fas fa-bell"></i>
+                        <div>
+                            <h3>Alertas e Relatórios</h3>
+                            <p>Receba alertas em tempo real sobre irregularidades e acesse relatórios detalhados para uma visão clara do seu consumo.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>
+                            <h3>Otimização e Economia</h3>
+                            <p>Utilize as informações para ajustar a operação, otimizar o consumo de energia e evitar gastos desnecessários, impulsionando a economia.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <h3>Decisões Estratégicas</h3>
+                            <p>Com dados precisos em mãos, tome decisões mais inteligentes e estratégicas para a saúde financeira e sustentabilidade da sua empresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-5">O Software Watt Works é a ferramenta que faltava para os usuários transformarem a gestão de energia de um desafio em uma vantagem competitiva.</p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

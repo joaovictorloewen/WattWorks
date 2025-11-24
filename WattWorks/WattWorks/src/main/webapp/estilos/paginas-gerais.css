@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+@media (min-width: 1300px) {
+  main {
+    position: relative;
+    width: calc(100% - 280px);
+    margin-left: 280px;
+    background-color: #f8f9fa;
+  }
+}
+
+@media (max-width: 1299.98px) {
+  main {
+    margin-top: 80px;
+  }
+}
+
+main {
+  background-color: #f8f9fa;
+}
+
+/*Páginas de Login e registro*/
+
+.erro-login {
+	color: red;
+	font-size: 13px;
+}
+
+.bg-cadastros {
+    background-image: url('/WattWorks/imagens/bg-roxo-azul.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    z-index: 1050;
+}
+
+.btn-voltar:hover {
+    background-color: #b02a37;
+    color: white;
+}
+
+.btn-roxo {
+	background-color: #81709f;
+	color: white;
+}
+
+.btn-roxo:hover {
+	background-color: #203058;
+	color: white;
+}
+
+.container-cadastros {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+label {
+    font-weight: 600;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+button.btn-primary {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.link-cadastro {
+    font-weight: 600;
+    text-decoration: none;
+    color: #81709f;
+}
+
+.link-cadastro:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.container-cadastros {
+	animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/*Cadastro de Faturas*/
+
+.body-faturas {
+    font-family: 'Inter', sans-serif !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+#previewImage {
+    max-height: 300px;
+    object-fit: contain; 
+    transition: transform 0.3s ease-in-out;
+}
+
+#previewImage:hover {
+    transform: scale(1.03);
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}

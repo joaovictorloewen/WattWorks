@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/WattWorks/imagens/logo-wattworks.png" />
+    <title>Criar Conta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/WattWorks/estilos/paginas-gerais.css" rel="stylesheet" /> 
+</head>
+<body class="bg-cadastros"> 
+
+    <a href="/WattWorks/index.html" class="btn-voltar">✘ Voltar</a>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="container-cadastros">
+            <h2 class="text-center mb-4">Criar Conta</h2>
+            <form action="registro" method="post">
+            	<input name="tipoUsuario" style="margin-left: -10000px;" value="cliente"> 
+                <div class="row mb-3" style="margin-top: -20px;"> 
+                    <div class="col">
+                        <label for="nome" class="form-label">Matriz / Grupo:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe um nome" required>
+                    </div>
+                    <div class="col">
+						<label for="email" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                    	<label for="fone" class="form-label">Telefone:</label>
+                        <input type="tel" class="form-control" id="fone" name="fone" placeholder="(00) 00000-0000" required>
+					</div>
+                    <div class="col">
+                        <label for="cnpj" class="form-label">CNPJ:</label>
+                        <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha:</label>
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Crie uma senha" required>
+                </div>
+                <button type="submit" class="btn btn-roxo w-100">Cadastrar</button>
+            </form>
+            <div class="text-center mt-3">
+                Já possui uma conta? <a class="link-cadastro" href="/WattWorks/login.jsp">Entrar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,390 @@
+body {
+	overflow-x: hidden;
+}
+
+.navbar, .footer {
+	background: linear-gradient(90deg, #203058, #81709f);
+    transition: background 0.5s;
+}
+
+.navbar-administracao {
+	background: linear-gradient(180deg, #D32F2F 0%, #FF7043 100%);
+}
+.navbar {
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: height 0.5s, width 0.5s;
+}
+
+.logo-nav img {
+    width: 70px !important;
+    height: auto;
+    transition: width 0.5s;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 40px;
+   	color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
+.user-menu {
+    display: none; 
+    position: absolute;
+    top: 81px; 
+    right: 15px; 
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1050; 
+    min-width: 280px; 
+}
+
+.h5-user {
+	color: #003366;
+	border-bottom: 2px solid #003366;
+	padding-bottom: 10px;
+}
+
+.h5-user>a>i {
+     color: #003366;
+}  
+
+.entidade-info p {
+	margin-bottom: 0px !important;
+}
+
+.btn-success {
+	background-color: #81709f;
+} 
+
+.btn-success:hover {
+	background-color: #203058; 
+}
+
+#hamburgerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    gap: 0.7rem;
+    transition: gap 0.3s;
+}
+
+ .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s, background 0.2s;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 0.5rem;
+    font-size: 1.1em;  
+    transition: color 0.2s;
+}
+
+@media (max-width: 991.98px) {
+    .navbar, .footer {
+        background: linear-gradient(90deg, #203058, #81709f);
+    }
+    
+    .navbar {
+        height: 80px;
+        width: 100%;
+    }
+    
+    .container {
+	    flex-direction: column !important;
+	    align-items: flex-start !important;
+	}
+	
+	  .logo-nav {
+	    margin-left: 20px;	
+	    justify-content: flex-start !important;
+	}
+	
+    .logo-nav img {
+        width: 70px !important;
+    }
+    
+    .navbar-nav {
+	    margin-top: 72px;
+	    width: 100%;
+	    background: #fff !important;
+	    align-items: center !important; 
+	    margin-right: 140px; 
+	    border-radius: 0 0 1rem 1rem;
+	    box-shadow: 0 8px 24px 0 rgba(32,48,88,0.10);
+	    padding: 0.5rem 0 1rem 0;
+	    animation: fadeInDown 0.5s cubic-bezier(.4,1.4,.6,1) both;
+	}
+	
+	#navLinks .navbar-nav {
+	    flex-direction: column !important;
+	    align-items: center !important;
+	    background: #fff !important;
+	    width: 100% !important;
+	    margin-left: 0 !important;
+	    padding-left: 0 !important;
+	    border-radius: 0 0 1rem 1rem;
+	    box-shadow: none;
+	}
+	
+	#navLinks .nav-link {
+	    color: #222 !important;
+	    background: #fff !important;
+	    width: 100% !important;
+	    padding: 1rem 2rem !important;
+	    border-bottom: 1px solid #e9ecef !important;
+	    font-weight: 600 !important;
+	    transition: background 0.3s, color 0.3s;
+	    text-align: center !important;
+	}
+
+    #navLinks .nav-link:last-child {
+        border-bottom: none !important;
+    }
+    
+    #navLinks .nav-link:hover, #navLinks .nav-link:focus {
+        background: #3366cc !important;
+        color: #fff !important;
+    }
+    
+    #navLinks .nav-link i {
+        color: #222 !important;
+        margin-right: 0.75rem;
+    }
+}
+      
+/* Desktop (min 992px, max 1299.98px) */
+@media (min-width: 992px) and (max-width: 1299.98px) {
+	.navbar {
+	    width: 100%;
+	    height: 80px;
+	}
+	
+	.logo-nav {
+	    margin-left: 30px;
+	    justify-content: flex-start;
+	}
+	
+	.logo-nav img {
+	    width: 70px !important;
+	}
+	
+	#hamburgerIcon {
+	    display: none !important;
+	}
+	
+	.user-icon {
+	    right: 20px;
+	    left: auto;
+	}
+	
+	#navLinks {
+	    position: static !important;
+	    background: none !important;
+	    box-shadow: none !important;
+	    width: auto !important;
+	    top: auto !important;
+	    left: auto !important;
+	    z-index: auto !important;
+	    display: flex !important;
+	    justify-content: center !important;
+	}
+	
+	#navLinks .navbar-nav {
+	    flex-direction: row !important;
+	    align-items: center !important;
+	    justify-content: center !important;
+	    background: none !important;
+	    margin: 0 auto;
+	}
+	
+	#navLinks .nav-link {
+	    color: #fff !important;
+	    background: none !important;
+	    border-radius: 0.5rem;
+	    margin: 0 0.25rem;
+	    padding: 0.5rem 1.2rem;
+	    border: none;
+	}
+	
+	#navLinks .nav-link:hover, #navLinks .nav-link:focus {
+	    background: #e9ecef !important;
+	    color: #203058 !important;
+	}
+	
+	#navLinks .nav-link i {
+	    color: #fff !important;
+	}
+} 
+
+@media (min-width: 1300px) {
+	body {
+	     min-height: 100vh;
+	 } 
+	         	
+	.navbar-clientes {
+		background: linear-gradient(180deg, rgba(32,48,88, 0.5), rgba(129,112,159, 0.5)), url('/WattWorks/imagens/bg-roxo-azul.jpeg');
+		background-position: center;
+	}
+	
+	.navbar-administracao {
+		background-image: url('/WattWorks/imagens/bg-wattworks-red.png');
+	    background-position: left bottom;
+	}
+	
+	.navbar {
+	    flex-direction: column !important;
+	    align-items: flex-start !important;
+	    height: 100vh !important;
+	    width: 280px !important;
+	    position: fixed !important;
+	    left: 0;
+	    top: 0;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    transition: background 0.5s, width 0.5s, height 0.5s;
+	    z-index: 1200;
+	    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+	}
+
+	
+	.container {
+	    flex-direction: column !important;
+	    align-items: flex-start !important;
+	    height: 100%;
+	    width: 100%;
+	    padding: 0 !important;
+	}
+	
+	.logo-nav {
+	    width: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    margin: 0;
+	}
+	
+	.logo-nav img {
+	    width: 120px !important;
+	    margin: 0 auto;
+	    display: block;
+	}
+	
+	#hamburgerIcon {
+	    display: none !important;
+	}
+	
+    #navLinks {
+		position: relative !important;
+		top: 20px !important;
+		display: block !important;
+		background: none !important;
+		box-shadow: none !important;
+		width: 100% !important;
+		left: auto !important;
+		z-index: auto !important;
+	}
+	
+	#navLinks .navbar-nav {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		width: 100%;
+		margin-left: 0;
+	}
+	
+    #navLinks .nav-item {
+        width: 100%;
+    }
+    
+    #navLinks .nav-link {
+        color: #fff !important;
+        background: transparent !important;
+        border-radius: 0.5rem;
+        margin: 0px;
+        padding: 7px 0px 7px 40px; 
+        border: none;
+        transition: background 0.2s, color 0.2s;
+        text-align: left;
+    }
+    
+    #navLinks .nav-link:hover, #navLinks .nav-link:focus {
+        background: #ffffff4c !important;
+    }
+    
+    #navLinks .nav-link i {
+        color: #fff !important;
+    }
+
+    .user-icon#userIcon {
+        position: fixed !important;
+        top: 40px !important;
+        right: 20px !important;
+        left: auto !important;
+        margin: 0 !important;
+        background: #fff !important;
+        color: #203058 !important;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        border: 2px solid #203058;
+        z-index: 1300;
+    }
+    
+    .user-icon#userIcon i {
+        color: #203058 !important;
+        font-size: 2rem;
+    }
+    
+    .user-menu {
+    	top: 12px;
+    	right: 55px;
+    }
+    
+    footer {
+        width: calc(100% - 280px);
+        margin-left: 280px;
+    }
+}
+  
+ @keyframes fadeInDown {
+     from {
+         opacity: 0;
+         transform: translateY(-30px);
+     }
+     
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }

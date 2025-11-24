@@ -1,0 +1,154 @@
+main {
+	height: 100vh;
+}
+
+.white {
+	color: #fff;
+}
+
+.bg-cadastros {
+    background-image: url('/WattWorks/imagens/bg-cadastros.png'); 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover; 
+    min-height: 300px; 
+}
+
+.bg-linear {
+	background: linear-gradient(90deg, #003366, #007bff);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+	font-size: 18px;
+    color: #fff !important;
+}
+
+.navbar-brand {
+	font-size: 30px;
+}
+
+.nav-link:hover {
+    font-weight: bold;        
+}
+
+#navbarNav .navbar-nav {
+    width: 100%; 
+    justify-content: center;
+}
+
+.user-icon {
+    font-size: 40px;
+    color: #fff; 
+    transition: color 0.2s ease-in-out;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+.user-icon:hover {
+	color: #000;
+}
+
+.user-menu {
+    display: none; 
+    position: absolute;
+    top: 81px; 
+    right: 15px; 
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1050; 
+    min-width: 280px; 
+}
+
+.h5-user {
+	color: #003366;
+	border-bottom: 2px solid #003366;
+	padding-bottom: 10px;
+}
+
+.h5-user>a>i {
+     color: #003366;
+}   
+
+.entidade-info p {
+	margin-bottom: 0px !important;
+}
+
+.card-cadastros{
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.testimonial-author {
+    font-weight: bold;
+    color: #0d6efd; 
+}
+
+/*Estilo do cadastro de faturas*/
+.body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    overflow: hidden; 
+    animation: fadeInScale 0.7s ease-out forwards; 
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btn-danger {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545; 
+    transform: translateX(-3px); 
+}
+
+#previewImage {
+    max-height: 300px;
+    object-fit: contain; 
+    transition: transform 0.3s ease-in-out;
+}
+
+#previewImage:hover {
+    transform: scale(1.03);
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
